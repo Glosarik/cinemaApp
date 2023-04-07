@@ -1,17 +1,17 @@
 package cinemaApi.service;
 
-import cinemaApi.model.UserDTO;
-import cinemaApi.util.UserRole;
-import cinemaApi.repository.user.UserRepository;
-import cinemaApi.util.Utils;
 import cinemaApi.model.User;
+import cinemaApi.model.UserDTO;
+import cinemaApi.repository.user.UserRepository;
+import cinemaApi.util.UserRole;
+import cinemaApi.util.Utils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static cinemaApi.util.Constants.*;
 
@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.getUserByLogin(username);
         if (user != null && user.isPasswordCorrect(password)) {
             currentUser = user;
-            logger.info("Пользователь " + username + " авторизовался");
+            logger.info(USER_PREFIX + username + USER_AUTHORIZED);
             return true;
         } else {
             System.out.println(INPUT_ERROR_MESSAGE);
@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
         newUser.setPassword(password);
         addUser(new UserDTO(newUser));
         currentUser = newUser;
-        logger.info("Пользователь" + login + " зарегестрировался");
+        logger.info(USER_PREFIX + login + USER_REGISTERED);
         return true;
     }
 

@@ -250,6 +250,10 @@ public final class Constants {
     public static final String MOVIE_SELECTION_MENU_OPENED = "Открыто меню выбора фильма";
     public static final String VIEW_TICKETS_MENU_OPENED = "Пользователь открыл меню просмотра билетов";
     public static final String USER_RETURNED_TICKET_FOR = "Пользователь вернул билет на ";
+    public static final String USER_PREFIX = "Пользователь ";
+    public static final String USER_AUTHORIZED = " авторизовался";
+    public static final String USER_REGISTERED = " зарегистрировался";
+
 
     private Constants() {
     }
