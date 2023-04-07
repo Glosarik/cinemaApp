@@ -1,5 +1,6 @@
 package cinemaApi.model;
 
+import cinemaApi.util.UserRole;
 import lombok.Getter;
 
 import java.time.LocalDateTime;

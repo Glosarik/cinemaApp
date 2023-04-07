@@ -3,7 +3,7 @@ package cinemaApi.repository.user;
 import cinemaApi.util.Utils;
 import cinemaApi.model.User;
 import cinemaApi.model.UserDTO;
-import cinemaApi.model.UserRole;
+import cinemaApi.util.UserRole;
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -1,10 +1,9 @@
 package cinemaApi.service;
 
 import cinemaApi.model.UserDTO;
-import cinemaApi.model.UserRole;
+import cinemaApi.util.UserRole;
 import cinemaApi.repository.user.UserRepository;
 import cinemaApi.util.Utils;
-import lombok.extern.slf4j.Slf4j;
 import cinemaApi.model.User;
 
 import java.util.Arrays;

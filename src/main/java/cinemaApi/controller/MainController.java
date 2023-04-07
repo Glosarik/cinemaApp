@@ -3,7 +3,7 @@ package cinemaApi.controller;
 import cinemaApi.model.Movie;
 import cinemaApi.model.Ticket;
 import cinemaApi.model.User;
-import cinemaApi.model.UserRole;
+import cinemaApi.util.UserRole;
 import cinemaApi.repository.film.MovieRepositoryImpl;
 import cinemaApi.repository.ticket.TicketRepositoryImpl;
 import cinemaApi.repository.user.UserRepositoryImpl;

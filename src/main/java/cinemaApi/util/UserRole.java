@@ -1,4 +1,4 @@
-package cinemaApi.model;
+package cinemaApi.util;
 
 public enum UserRole {
     USER,

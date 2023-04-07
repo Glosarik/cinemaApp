@@ -1,5 +1,6 @@
 package cinemaApi.model;
 
+import cinemaApi.util.UserRole;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
