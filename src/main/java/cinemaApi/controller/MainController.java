@@ -46,7 +46,7 @@ public class MainController {
     }
 
     private boolean handleUnauthenticatedUser() {
-        Utils.printMenu(UNAUTHENTICATED_MENU.strip().split("\\s*\\n\\s*"));
+        Utils.printMenu(UNAUTHENTICATED_MENU.strip().split(NEWLINE_REGEX));
         int choice = Integer.parseInt(Utils.getInput(ENTER_CHOICE, EMPTY_FIELD, Utils::isNumeric, INPUT_ERROR_MESSAGE));
 
         switch (choice) {
