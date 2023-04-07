@@ -3,12 +3,12 @@ package cinemaApi.controller;
 import cinemaApi.model.Movie;
 import cinemaApi.model.Ticket;
 import cinemaApi.model.User;
-import cinemaApi.util.UserRole;
 import cinemaApi.repository.film.MovieRepositoryImpl;
 import cinemaApi.repository.ticket.TicketRepositoryImpl;
 import cinemaApi.repository.user.UserRepositoryImpl;
 import cinemaApi.service.*;
 import cinemaApi.util.ConnectionManager;
+import cinemaApi.util.UserRole;
 import cinemaApi.util.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -271,6 +271,7 @@ public class MainController {
         }
         logger.info(TICKET_PURCHASE_MENU_OPENED);
 
+        System.out.println(isAdmin);
         while (true) {
             System.out.print(VIEW_FILM_OPTIONS);
             if (isAdmin) {
@@ -283,7 +284,7 @@ public class MainController {
             switch (choice) {
                 case ZERO:
                     return;
-                case ONE, FOUR:
+                case ONE:
                     handleTicketPurchase(choice);
                     break;
                 case TWO:
@@ -292,9 +293,14 @@ public class MainController {
                     }
                     break;
                 case THREE:
-                    ticketService.viewAllTicket();
                     if (isAdmin) {
+                        ticketService.viewAllTicket();
                         returnTicket();
+                    }
+                    break;
+                case FOUR:
+                    if (isAdmin) {
+                        handleTicketPurchase(choice);
                     }
                     break;
                 default:
