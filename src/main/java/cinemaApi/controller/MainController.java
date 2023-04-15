@@ -270,8 +270,6 @@ public class MainController {
             isAdmin = true;
         }
         logger.info(TICKET_PURCHASE_MENU_OPENED);
-
-        System.out.println(isAdmin);
         while (true) {
             System.out.print(VIEW_FILM_OPTIONS);
             if (isAdmin) {

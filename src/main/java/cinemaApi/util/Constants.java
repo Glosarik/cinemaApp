@@ -117,7 +117,7 @@ public final class Constants {
     public static final String EMPTY_FIELD = "Поле не может быть пустым";
     public static final String ENTER_PASSWORD = "Введите пароль: ";
     public static final String LOGIN_ALREADY_TAKEN = "Данный логин уже занят, попробуйте еще раз.";
-    public static final String ENTER_EMAIL = "Введите email: ";
+    public static final String ENTER_EMAIL = "Введите email в формате (example@gmail.com): ";
     public static final String INVALID_EMAIL_ERROR = "Email-адрес некорректный.";
     public static final String REMAINING_ATTEMPTS = "Осталось попыток: ";
     public static final String FILM_NUM_HEADER = "№";

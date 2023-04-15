@@ -103,7 +103,12 @@ public class UserServiceImpl implements UserService {
                 } while (!isUpdated);
             }
             case FIVE -> {
-                deleteUser(userId);
+                if (userId != currentUser.getUserId()) {
+                    deleteUser(userId);
+                    isUpdated = true;
+                } else {
+                    System.out.println(Utils.getRedString(UNSUPPORTED_UPDATE_ACTION));
+                }
             }
             default -> throw new UnsupportedOperationException(UNSUPPORTED_UPDATE_ACTION);
         }
